@@ -122,8 +122,8 @@ lane :archive do |options|
   xcodebuild(
     archive: true,
     archive_path: './build-dir/DUMessaging.xcarchive',
-    scheme: 'DUMessaging',
-    workspace: 'DUMessaging.xcworkspace'
+    scheme: ENV["DU_IOS_FRAMEWORK_SCHEME"],
+    workspace: ENV["DU_WORKSPACE"]
   )
 end
 
